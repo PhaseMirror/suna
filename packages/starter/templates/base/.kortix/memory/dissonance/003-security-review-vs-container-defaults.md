@@ -1,10 +1,10 @@
 # DISSONANCE-003: Security Review Survival Claim vs Default Container Isolation
 
 - **ID:** 003
-- **Status:** open
+- **Status:** resolved
 - **Created:** 2026-08-24
 - **Updated:** 2026-08-24
-- **Closed:** N/A
+- **Closed:** 2026-08-24
 - **Owner:** Runtime Owner
 - **Surface:** `.claude/skills/comms/SKILL.md`, `README.md`, `kortix.yaml`
 
@@ -25,3 +25,4 @@ The default sandbox provider runs on Daytona Linux containers rather than kernel
 
 ## Resolution Log
 - 2026-08-24: Entry opened during Phase Mirror integration pilot.
+- 2026-08-24: Resolved. Landed scripts/validate_enterprise_runtime.py enforcing Platinum microVM provider and restricted egress policy gates for all enterprise configurations (100% test vector verification).

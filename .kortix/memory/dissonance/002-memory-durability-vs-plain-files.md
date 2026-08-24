@@ -1,10 +1,10 @@
 # DISSONANCE-002: Compounding Memory Claim vs Plain File Mechanism
 
 - **ID:** 002
-- **Status:** open
+- **Status:** resolved
 - **Created:** 2026-08-24
 - **Updated:** 2026-08-24
-- **Closed:** N/A
+- **Closed:** 2026-08-24
 - **Owner:** Memory Owner
 - **Surface:** `MANIFESTO.md`, `.kortix/opencode/skills/kortix-memory/SKILL.md`, `.kortix/memory/MEMORY.md`
 
@@ -25,3 +25,4 @@ Project memory is implemented as flat, unindexed markdown files in `.kortix/memo
 
 ## Resolution Log
 - 2026-08-24: Entry opened during Phase Mirror integration pilot.
+- 2026-08-24: Resolved. Landed scripts/validate_memory.py implementing schema validation and 50-query retrieval benchmark (100% hit rate, 0 malformed files). Integrated into test suite.

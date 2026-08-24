@@ -133,6 +133,26 @@ class TestPhaseMirrorIntegration(unittest.TestCase):
         self.assertIn("license_audit", data)
         self.assertIn("cr_coverage", data)
 
+    def test_memory_schema_and_retrieval_benchmark(self):
+        script = REPO_ROOT / "scripts" / "validate_memory.py"
+        self.assertTrue(script.exists(), "validate_memory.py script missing")
+        res = subprocess.run([sys.executable, str(script)], capture_output=True, text=True, check=True)
+        self.assertIn("Validation: PASSED", res.stdout)
+        self.assertIn("Benchmark Target (>=80%): SATISFIED", res.stdout)
+
+    def test_enterprise_runtime_gate(self):
+        script = REPO_ROOT / "scripts" / "validate_enterprise_runtime.py"
+        self.assertTrue(script.exists(), "validate_enterprise_runtime.py script missing")
+        res = subprocess.run([sys.executable, str(script)], capture_output=True, text=True, check=True)
+        self.assertIn("Enterprise Runtime Gate Suite: 5/5 vectors verified (100.0%)", res.stdout)
+
+    def test_airgapped_self_host_suite(self):
+        script = REPO_ROOT / "scripts" / "test_self_host_airgapped.py"
+        self.assertTrue(script.exists(), "test_self_host_airgapped.py script missing")
+        res = subprocess.run([sys.executable, str(script)], capture_output=True, text=True, check=True)
+        self.assertIn("Air-Gapped Suite Result: PASSED (Zero Egress Verified)", res.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()
+

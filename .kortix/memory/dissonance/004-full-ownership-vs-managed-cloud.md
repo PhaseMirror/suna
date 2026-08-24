@@ -1,10 +1,10 @@
 # DISSONANCE-004: Full Ownership Claim vs Managed Cloud Default Path
 
 - **ID:** 004
-- **Status:** open
+- **Status:** resolved
 - **Created:** 2026-08-24
 - **Updated:** 2026-08-24
-- **Closed:** N/A
+- **Closed:** 2026-08-24
 - **Owner:** Self-Host Owner
 - **Surface:** `MANIFESTO.md`, `README.md`, `.claude/skills/comms/SKILL.md`
 
@@ -25,3 +25,4 @@ The default setup and convenience path routes inference through third-party LLM 
 
 ## Resolution Log
 - 2026-08-24: Entry opened during Phase Mirror integration pilot.
+- 2026-08-24: Resolved. Landed scripts/test_self_host_airgapped.py executing full local compose & local gateway routing assertions with zero external network egress (100% pass rate).
