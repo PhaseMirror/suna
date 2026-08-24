@@ -121,6 +121,28 @@ to a prod incident. After resolving ANY incident or near-miss, append its rule
 there in the same session — an incident that leaves no learning behind is not
 finished.
 
+## Phase Mirror: claim vs mechanism gate (pre-CR requirement)
+
+`skills/phase-mirror/SKILL.md` (and `.claude/skills/phase-mirror/SKILL.md`) defines the
+**Phase Mirror** method: mirroring a stated claim, surfacing the dissonance
+between the claim and operating mechanisms, and converting the mismatch into a
+small testable phase with a named owner and metric.
+
+**The gate:** Before opening ANY Change Request or PR whose body, commits, or
+diffs contain claims about capability, architecture, security, scaling, ownership,
+or licensing, invoke the `phase-mirror` skill. You must emit a `## Phase Mirror (Claim vs Mechanism)`
+block in the CR description:
+
+- **Claim:** Exact stated assertion.
+- **Mirror:** Restatement of the claim without endorsement or dilution.
+- **Dissonance:** Concrete tension between the claim and underlying incentives, mechanisms, or evidence.
+- **Phase (Owner + Metric):** One small, reversible change with named owner and verifiable metric.
+
+**Dissonance memory:** Accepted findings are recorded under `.kortix/memory/dissonance/`.
+Before proposing architectural or capability changes, query the register to avoid
+re-proposing known unverified claims. A dissonance record is closed only when the
+testable phase merges and its metric is verified.
+
 ## How to communicate: precise, technically accurate, no fluff
 
 Write every response — chat, PR text, commit messages, code comments, docs — in

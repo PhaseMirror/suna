@@ -84,6 +84,8 @@ opencode:
 # starts locked down. The starter's own `kortix` agent is deliberately
 # granted "all" across the board so a fresh project is capable out of the
 # box — narrow it once you know what this project actually needs.
+# Governance: every agent that can open a CR can invoke `phase-mirror`
+# to validate claims; only human-approved CRs can close dissonance records.
 agents:
   kortix:
     connectors: all

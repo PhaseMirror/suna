@@ -12,5 +12,6 @@ keeps it tidy on a schedule.
 
 To work with memory, load the **kortix-memory** skill.
 
+- [dissonance/README.md](dissonance/README.md) — active tension register of claim-vs-reality gaps and testable phases
 <!-- Add one line per sub-file as you create them, e.g.:
 - [connections.md](connections.md) — third parties, MCP servers, channels -->

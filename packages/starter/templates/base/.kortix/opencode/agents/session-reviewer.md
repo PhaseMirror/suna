@@ -35,6 +35,7 @@ output is a findings report; you change nothing.
    - the same multi-step sequence performed by hand 3+ times
    - executable tools under `.kortix/opencode/tools/` that raised
    - missed shortcuts or information nothing captured
+   - unmirrored capability/security claims in CRs (missing Phase Mirror validation)
 4. **Attribute each finding** to the harness component that should absorb
    it: an agent prompt, a sub-agent, a skill, a tool, or memory.
 

@@ -23,6 +23,18 @@ Closes #
 
 <!-- Commands run, manual steps, screenshots. State what you verified. -->
 
+## Phase Mirror (Claim vs Mechanism)
+
+<!--
+  Required for PRs introducing or touching capability, architecture, security,
+  scaling, ownership, or licensing claims. State "N/A" only for trivial typos or pure internal refactors.
+-->
+
+- **Claim:** 
+- **Mirror:** 
+- **Dissonance:** 
+- **Phase (Owner + Metric):** 
+
 ## Security & data review
 
 - [ ] No secrets, keys, or credentials are committed (verified by secret scan / review)

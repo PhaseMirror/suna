@@ -31,10 +31,14 @@ only for a package that is not pre-installed; no venvs or
    output. Whatever proves the change actually works.
 5. **Commit small, meaningful chunks.** Each commit leaves the repo in
    a working state. Message says the *why*, not the what.
-6. **Show your work.** Use the \`show\` tool to surface files, URLs,
+6. **Phase Mirror before opening a CR.** If your change or PR description
+   makes claims about capability, architecture, security, scaling, or licensing,
+   load `phase-mirror`. Check `.kortix/memory/dissonance/` for existing
+   tensions and include a `## Phase Mirror` block in the CR description.
+7. **Show your work.** Use the \`show\` tool to surface files, URLs,
    images, code, or rendered output to the user inline — better than
    describing them in prose.
-7. **Don't half-ship.** Hit a blocker? Surface it with what you tried
+8. **Don't half-ship.** Hit a blocker? Surface it with what you tried
    and what's needed. Don't paper over.
 
 ## Memory

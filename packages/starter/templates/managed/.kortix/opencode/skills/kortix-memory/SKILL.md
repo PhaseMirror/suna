@@ -56,7 +56,10 @@ memory is about durable knowledge, not session state.
 ├── overview.md         What this project IS — purpose, shape, stakeholders.
 ├── connections.md      Third parties, MCP servers, channels, and connectors.
 ├── conventions.md      Coding patterns, naming, do / don't, style decisions.
-└── decisions.md        Architectural and business decisions worth not re-debating.
+├── decisions.md        Architectural and business decisions worth not re-debating.
+└── dissonance/         Phase Mirror tension register: claim-vs-reality gaps.
+    ├── README.md       Register schema, lifecycle states, and review rules.
+    └── <id>-<slug>.md  Individual versioned claim → dissonance → phase records.
 ```
 
 Add new files freely when a topic deserves its own page (one topic per
@@ -90,6 +93,8 @@ there's enough depth to warrant a click.
   thing that breaks every quarter.
 - **Glossary** — domain terms specific to this project that an
   outsider wouldn't know.
+- **Phase Mirror dissonance records** — claim-vs-reality tensions under
+  `.kortix/memory/dissonance/` with named owners, metrics, and lifecycle state.
 - **People & ownership** *(optional)* — who owns which surface, how to
   reach them, what they care about.
 
