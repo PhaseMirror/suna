@@ -72,11 +72,10 @@ class TestPhaseMirrorIntegration(unittest.TestCase):
         self.assertIn("Phase Mirror (Claim vs Mechanism)", content)
 
     def test_dissonance_register_schema(self):
-        dissonance_dir = REPO_ROOT / "packages" / "starter" / "templates" / "base" / ".kortix" / "memory" / "dissonance"
-        self.assertTrue(dissonance_dir.exists(), "Dissonance register directory missing")
-        
-        readme = dissonance_dir / "README.md"
-        self.assertTrue(readme.exists(), "Dissonance register README missing")
+        dissonance_dirs = [
+            REPO_ROOT / ".kortix" / "memory" / "dissonance",
+            REPO_ROOT / "packages" / "starter" / "templates" / "base" / ".kortix" / "memory" / "dissonance",
+        ]
         
         expected_records = [
             "001-open-source-vs-elv2.md",
@@ -84,27 +83,32 @@ class TestPhaseMirrorIntegration(unittest.TestCase):
             "003-security-review-vs-container-defaults.md",
             "004-full-ownership-vs-managed-cloud.md",
         ]
-        
-        for rec_name in expected_records:
-            rec_path = dissonance_dir / rec_name
-            self.assertTrue(rec_path.exists(), f"Missing dissonance record {rec_name}")
-            content = rec_path.read_text(encoding="utf-8")
+
+        for dissonance_dir in dissonance_dirs:
+            self.assertTrue(dissonance_dir.exists(), f"Dissonance register directory missing at {dissonance_dir}")
+            readme = dissonance_dir / "README.md"
+            self.assertTrue(readme.exists(), f"Dissonance register README missing at {readme}")
             
-            # Check required fields
-            self.assertRegex(content, r"^#\s*DISSONANCE-[0-9]+:", f"{rec_name} missing title header")
-            self.assertIn("- **ID:**", content, f"{rec_name} missing ID")
-            self.assertIn("- **Status:**", content, f"{rec_name} missing Status")
-            self.assertIn("- **Created:**", content, f"{rec_name} missing Created")
-            self.assertIn("- **Owner:**", content, f"{rec_name} missing Owner")
-            self.assertIn("- **Surface:**", content, f"{rec_name} missing Surface")
-            self.assertIn("## Claim", content, f"{rec_name} missing Claim section")
-            self.assertIn("## Mirror", content, f"{rec_name} missing Mirror section")
-            self.assertIn("## Dissonance", content, f"{rec_name} missing Dissonance section")
-            self.assertIn("## Phase", content, f"{rec_name} missing Phase section")
-            self.assertIn("- **Action:**", content, f"{rec_name} missing Phase Action")
-            self.assertIn("- **Owner:**", content, f"{rec_name} missing Phase Owner")
-            self.assertIn("- **Metric:**", content, f"{rec_name} missing Phase Metric")
-            self.assertIn("## Resolution Log", content, f"{rec_name} missing Resolution Log")
+            for rec_name in expected_records:
+                rec_path = dissonance_dir / rec_name
+                self.assertTrue(rec_path.exists(), f"Missing dissonance record {rec_name} in {dissonance_dir}")
+                content = rec_path.read_text(encoding="utf-8")
+                
+                # Check required fields
+                self.assertRegex(content, r"^#\s*DISSONANCE-[0-9]+:", f"{rec_name} missing title header")
+                self.assertIn("- **ID:**", content, f"{rec_name} missing ID")
+                self.assertIn("- **Status:**", content, f"{rec_name} missing Status")
+                self.assertIn("- **Created:**", content, f"{rec_name} missing Created")
+                self.assertIn("- **Owner:**", content, f"{rec_name} missing Owner")
+                self.assertIn("- **Surface:**", content, f"{rec_name} missing Surface")
+                self.assertIn("## Claim", content, f"{rec_name} missing Claim section")
+                self.assertIn("## Mirror", content, f"{rec_name} missing Mirror section")
+                self.assertIn("## Dissonance", content, f"{rec_name} missing Dissonance section")
+                self.assertIn("## Phase", content, f"{rec_name} missing Phase section")
+                self.assertIn("- **Action:**", content, f"{rec_name} missing Phase Action")
+                self.assertIn("- **Owner:**", content, f"{rec_name} missing Phase Owner")
+                self.assertIn("- **Metric:**", content, f"{rec_name} missing Phase Metric")
+                self.assertIn("## Resolution Log", content, f"{rec_name} missing Resolution Log")
 
     def test_memory_index_points_to_dissonance(self):
         memory_index = REPO_ROOT / "packages" / "starter" / "templates" / "base" / ".kortix" / "memory" / "MEMORY.md"
