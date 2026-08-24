@@ -21,6 +21,49 @@ linked, not inlined.
 
 ## Register
 
+### A snapshot build stuck in progress silently rolls every later resume back (2026-08-24)
+
+**When:** operating pause/resume sandbox lifecycles where each pause appends a
+diff build and resume restores the newest build with a ready status. A build
+wedged in `snapshotting` is skipped by resume even when its rootfs upload
+completed; the sandbox silently boots the pre-wedge state, and every later
+pause then snapshots that stale branch as a new "success" build, burying the
+good lineage deeper on each cycle. User data vanishes with zero errors on any
+surface — the session opens fast and empty. Repair = finalize the wedged
+`env_builds` row (`status='success'`, `finished_at=created_at`), mark the
+stale-branch builds `failed`, resume. Verify the rootfs object exists in the
+`fc-templates` bucket before finalizing. *Incident:* essentia session
+`70f64114` resumed with an empty transcript on 2026-08-24; wedged build
+`4b583212` (03:34:23Z, during the wake-race window fixed by `b250949eb1`) had
+its full 660 MB rootfs in S3 but the status never flipped; 4 stale builds
+stacked on top; a cluster-wide sweep found 71 wedged builds and 11
+silent-rollback victim sandboxes. The transcript was recovered by the repair
+above. *Enforcer:* none yet — a wedged-build watchdog belongs in the
+self-hosted E2B ops (kortix-infra `e2b/ops`), and the sandbox daemon should
+detect a restore that is older than Kortix's last-known session activity and
+say so instead of serving an empty transcript.
+
+### A stale readiness observer must claim the runtime row before stopping its provider (2026-08-24)
+
+**When:** parking an established runtime after a failed readiness or wake probe.
+CAS the exact observed `active` row, including `updated_at`, before closing
+compute or calling `provider.stop()`. Never write a stale metadata object after
+an external stop. Persist stop intent so a parked-row sweep retries after a
+crash. *Incident:* overlapping Essentia `/start` requests paused each new E2B
+boot after about 8 seconds and erased its wake fence; OpenCode needed 11.574
+seconds. *Enforcer:* runtime-identity and parked-runtime verification tests pin
+the CAS and durable retry.
+
+### A response-header timeout must end when actual provider headers arrive (2026-08-24)
+
+**When:** wrapping an AI SDK streaming request with a response-header deadline.
+Apply the deadline to the provider `fetch`, then clear it when `fetch` resolves.
+Do not use that deadline as the full-stream abort signal; AI SDK returns
+synthetic gateway headers before Bedrock `/converse-stream` returns. Keep client
+cancellation attached for the full body. *Incident:* Essentia Fable produced 14
+zero-token turns at 89-91 seconds, recorded as `200 ok=true`. *Enforcer:* gateway
+header/body/cancellation and timeout-classification tests.
+
 ### Refuse a release version whose tag already names another commit (2026-08-24)
 
 **When:** resolving a production version before migrations or rollout. Check
