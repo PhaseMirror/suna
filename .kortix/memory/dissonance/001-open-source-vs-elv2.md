@@ -1,10 +1,10 @@
 # DISSONANCE-001: Open Source Claim vs Elastic License 2.0 Terms
 
 - **ID:** 001
-- **Status:** open
+- **Status:** resolved
 - **Created:** 2026-08-24
 - **Updated:** 2026-08-24
-- **Closed:** N/A
+- **Closed:** 2026-08-24
 - **Owner:** Comms Owner
 - **Surface:** `README.md`, `MANIFESTO.md`, `.claude/skills/comms/SKILL.md`
 
@@ -25,3 +25,4 @@ The repository is governed by the Elastic License 2.0 (ELv2). ELv2 is not an Ope
 
 ## Resolution Log
 - 2026-08-24: Entry opened during Phase Mirror integration pilot.
+- 2026-08-24: Resolved. Updated README.md, MANIFESTO.md, and .claude/skills/comms/SKILL.md to state source-available under Elastic License 2.0 (ELv2). Verified by scripts/phase-mirror-metrics.py with 0 unhedged claims.

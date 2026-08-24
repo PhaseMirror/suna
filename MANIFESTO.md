@@ -106,7 +106,7 @@ Under that surface is as much depth as you can stand. The interface and the code
 
 By being the best version of it, and by running on it in public. We build our own companies on Kortix and let people watch: agents reviewing pull requests, preview environments per change, a Slack message turning into a shipped PR, outreach that runs itself, SEO that just happens. The platform is the proof of the platform.
 
-The money is clean. Open source and self-hostable underneath. A cloud where we charge for seats and compute. Single-tenant deployments for the customers who have to run it themselves, anywhere they want to put it. A marketplace of agents, skills, and whole importable projects. And **Platinum.dev** — the compute floor under all of it: CPU and GPU sandboxes, inference, training, built first because we needed millions of cheap, fast, microVM-isolated machines for ourselves, and then opened up to everyone else who needs the same thing on-prem or in a private cloud, for a fraction of what they're paying now.
+The money is clean. Source-available under Elastic License 2.0 (ELv2) and self-hostable underneath. A cloud where we charge for seats and compute. Single-tenant deployments for the customers who have to run it themselves, anywhere they want to put it. A marketplace of agents, skills, and whole importable projects. And **Platinum.dev** — the compute floor under all of it: CPU and GPU sandboxes, inference, training, built first because we needed millions of cheap, fast, microVM-isolated machines for ourselves, and then opened up to everyone else who needs the same thing on-prem or in a private cloud, for a fraction of what they're paying now.
 
 ---
 

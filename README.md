@@ -4,9 +4,9 @@
 
 # Kortix
 
-**The open-source AI Management System**
+**Source-available AI Management System (Elastic License 2.0)**
 
-**The leading open-source alternative to Claude Cowork and ChatGPT Work.**
+**The leading open-code alternative to Claude Cowork and ChatGPT Work under Elastic License 2.0.**
 
 [![GitHub stars](https://img.shields.io/github/stars/kortix-ai/suna?style=flat&color=111111&label=Stars)](https://github.com/kortix-ai/suna/stargazers)
 [![Release](https://img.shields.io/github/v/release/kortix-ai/suna?style=flat&color=111111&label=Release)](https://github.com/kortix-ai/suna/releases/latest)
@@ -27,7 +27,7 @@ Agents that deliver finished work — reports, decks, code, replies, deployed ch
 product category. Every version of it runs inside a model lab, on that lab's model, with your
 company's brain on their side of the wall.
 
-**Kortix is the one you own.** It's an open-source **AI Management System**: your agents, the
+**Kortix is the one you own.** It's a source-available **AI Management System** (licensed under Elastic License 2.0): your agents, the
 skills they share, your company memory, and every connector live in one git repo — versioned,
 diffable, and shared by the whole company. The agents work on real **cloud computers** — an
 isolated sandbox per session, on its own branch — and land what they produce through a **change
@@ -41,7 +41,7 @@ Any model, your own API keys, your own infrastructure or our managed cloud.
 
 | | Claude Cowork | ChatGPT Work | **Kortix** |
 | --- | --- | --- | --- |
-| **Source** | Closed | Closed | **Open source — read it, fork it, audit it** |
+| **Source** | Closed | Closed | **Source-available (Elastic License 2.0) — read it, fork it, audit it** |
 | **Models** | Anthropic only | GPT-5.6 only | **Any provider, your own API keys** |
 | **Where it runs** | Anthropic's cloud, or Bedrock / Google Cloud / Microsoft Foundry — no self-host | OpenAI's cloud, no self-host | **Our cloud, your VPC, or your own on-prem network** |
 | **Your configuration** | In their product | In their product | **Files in a git repo you own** |
@@ -123,7 +123,7 @@ end).
 
 ## Why Kortix
 
-- **Open & yours.** Open source and self-hostable — your data, your models, your infrastructure. No lock-in, fully auditable.
+- **Open & yours.** Source-available (Elastic License 2.0) and self-hostable — your data, your models, your infrastructure. No lock-in, fully auditable.
 - **A workforce, not one assistant.** Org-scale specialist agents that run in parallel and compound a shared memory.
 - **Real work, not chat.** Agents run on real cloud computers and return finished deliverables — and take real actions in your tools.
 - **Everything is code.** Versioned, reviewable, portable, governable — never a black box.

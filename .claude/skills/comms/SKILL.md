@@ -26,11 +26,11 @@ Four sanctioned lines. Each has one job — don't swap them.
 | Layer | Line | Use for |
 | --- | --- | --- |
 | **Category** | AI Management System | What Kortix *is*. The default noun everywhere. |
-| **Tagline** | The open-source AI Management System | Headlines, hero, site, README. The default lead. |
-| **Comparative** | The open-source alternative to Claude Cowork and ChatGPT Work | Search, social, launch, GitHub. Anchors against the known category. |
+| **Tagline** | The source-available AI Management System (Elastic License 2.0) | Headlines, hero, site, README. The default lead. |
+| **Comparative** | The open-code alternative to Claude Cowork and ChatGPT Work under Elastic License 2.0 | Search, social, launch, GitHub. Anchors against the known category. |
 | **Manifesto line** | A company is going to be a git repository | The deep thesis. Manifesto, vision talks, founder voice. |
 
-**One-line what-is:** Kortix is the open-source AI Management System — your agents, their skills,
+**One-line what-is:** Kortix is the source-available AI Management System (Elastic License 2.0) — your agents, their skills,
 your company memory, and every connector in one git repo you own, with the agents working on real
 cloud computers.
 
@@ -40,15 +40,15 @@ explanation.
 
 ### The three lengths
 
-- **Short (≤140 chars — GitHub About, meta description):** Open-source AI Management System —
+- **Short (≤140 chars — GitHub About, meta description):** Source-available AI Management System (ELv2) —
   command your agents, skills, memory, and connectors from one repo you own. Any model. Self-host
   or cloud.
-- **Standard (~30 words — README subtitle, landing sub):** Kortix is an open-source AI Management
-  System — your agents, skills, company memory, and connectors in one git repo you own. Any model,
+- **Standard (~30 words — README subtitle, landing sub):** Kortix is a source-available AI Management
+  System (Elastic License 2.0) — your agents, skills, company memory, and connectors in one git repo you own. Any model,
   your keys, self-hosted or managed cloud.
 - **Long (~70 words — press, docs, about):** Agents that deliver finished work are now a product
   category. Every version of it runs inside a model lab, on that lab's model, with your company's
-  brain on their side of the wall. Kortix is the one you own: an open-source AI Management System
+  brain on their side of the wall. Kortix is the one you own: a source-available AI Management System (Elastic License 2.0)
   where your agents, skills, memory, and connectors live in one git repo, and the agents work on
   real cloud computers, landing work through a change request a human approves.
 
@@ -106,7 +106,7 @@ back to `main` — is the unsolved part, and it's what Kortix is built for.
 - **Category:** AI Management System.
 - **Roof (promise):** Run your whole company from one place you own — a workforce of AI agents that does real work.
 - **Four pillars:**
-  1. **Open & yours.** Open source and self-hostable — your data, your models, your infrastructure. No lock-in, fully auditable.
+  1. **Open & yours.** Source-available (Elastic License 2.0) and self-hostable — your data, your models, your infrastructure. No lock-in, fully auditable.
   2. **A workforce, not one assistant.** Org-scale specialist agents that run in parallel and compound a shared memory.
   3. **Real work, not chat.** Agents run on real cloud computers and return finished deliverables — and take real actions in your tools.
   4. **Everything is code.** Versioned, reviewable, portable, governable — never a black box.
@@ -129,7 +129,7 @@ Use these; don't invent others.
 - **Merge is default-deny for agents, not human-only.** An admin can grant `project.cr.merge`. Say the grant lives in `kortix.yaml` and cannot be widened without an approved change — do not say "only a human can merge".
 - **"Air-gapped" is not a self-host capability today.** `kortix self-host start` pulls images from docker.io and reaches a sandbox provider over egress. Route isolated topologies to Enterprise.
 - Bring your own models — any provider, your own keys — or the ChatGPT, Claude, or Cursor subscription you already pay for.
-- Open source and self-hostable; runs on Kortix Cloud, your servers, or fully on-prem.
+- Source-available (Elastic License 2.0) and self-hostable; runs on Kortix Cloud, your servers, or fully on-prem.
 - Three ways work runs: on-demand, human-assisted, and automated.
 - 20,000+ GitHub stars on `kortix-ai/suna`. Cite the number, never "the go-to" or "the leading."
 
@@ -178,7 +178,7 @@ exactly.
 ### Brand names
 
 - **Kortix** — the company and the platform. Lead with this everywhere.
-- **Suna** — the open-source repository the platform lives in (`kortix-ai/suna`). In outward copy, prefer **Kortix** alone unless you specifically mean the repo.
+- **Suna** — the source-available repository the platform lives in (`kortix-ai/suna`, licensed under Elastic License 2.0). In outward copy, prefer **Kortix** alone unless you specifically mean the repo.
 - **Kortix Cloud** — the managed hosting. Capitalize both words.
 - **Platinum.dev** — the compute floor under the platform (CPU/GPU sandboxes, inference, training). Lowercase `.dev`.
 
@@ -240,12 +240,12 @@ exactly.
 | No-code | Feels as simple as chat, with code underneath | Depth under the surface, not a ceiling. |
 | Vendor / we host your AI | Open, self-hostable, yours down to the metal | We don't rent your company back to you. |
 | The go-to / #1 / the best | 20,000+ GitHub stars | State the fact, not the superlative. |
-| *(exception)* | **"the leading open-source alternative"** IS sanctioned — decided 2026-07-31 and used in the hero. It rests on the star count; cite that if challenged. No other superlative is allowed, and never extend it to "the best" or "#1". |
-| Source-available; Elastic License; Apache 2.0; MIT | open source (and stop there) | Never name a license in public copy. |
+| *(exception)* | **"the leading open-code alternative under Elastic License 2.0"** IS sanctioned — decided 2026-07-31 and updated to reflect ELv2 source availability. It rests on the star count; cite that if challenged. No other superlative is allowed, and never extend it to "the best" or "#1". |
+| Unqualified "open source" | source-available under Elastic License 2.0 (ELv2) | Avoid confusing OSI open source with ELv2 commercial restrictions. |
 | more powerful · fully extensible · seamless · revolutionary · unlock productivity · next-gen · AI-powered magic · transformative | a concrete mechanism | Banned hype. |
 
-**On the license:** Kortix ships under the Elastic License. In any public-facing copy say
-**"open source"** and stop. Do not name a license, do not add a license badge. "Developed in the
+**On the license:** Kortix ships under the Elastic License 2.0 (ELv2). In any public-facing copy specify
+**"source-available under Elastic License 2.0"** (or "open-code under ELv2"). Note the managed-service restriction where relevant. "Developed in the
 open," "code you can read, fork, and audit," and "self-host for free" are accurate and fine.
 
 ---
@@ -306,7 +306,7 @@ Each pitch: **who → pain → promise → proof/mechanism → sanctioned phrase
 
 ## 10 · Business model *(context, not external copy)*
 
-Open source and self-hostable underneath; a cloud charging for seats and compute; single-tenant
+Source-available under Elastic License 2.0 (ELv2) and self-hostable underneath; a cloud charging for seats and compute; single-tenant
 deployments for those who must self-run; a marketplace of agents, skills, and importable projects;
 and **Platinum.dev**, the compute floor (CPU/GPU sandboxes, inference, training). The platform
 proves itself by running Kortix's own companies in public.
@@ -320,7 +320,7 @@ proves itself by running Kortix's own companies in public.
 - [ ] Product nouns are the canonical ones from §6, styled correctly.
 - [ ] Every claim traces to a sanctioned proof point in §4 — nothing invented.
 - [ ] Any competitor named is spelled and described per §5, with no unverified claims.
-- [ ] "open source" used; no license named.
+- [ ] Source-available under Elastic License 2.0 (ELv2) stated; no unqualified "open source" claims.
 - [ ] One audience per sentence; the audience matches its pitch in §9.
 - [ ] Paired with `../brand-guidelines/SKILL.md` if the copy ships inside an asset.
 - [ ] Any conflict with this skill flagged, with an on-message alternative offered.
