@@ -82,6 +82,7 @@ class TestPhaseMirrorIntegration(unittest.TestCase):
             "002-memory-durability-vs-plain-files.md",
             "003-security-review-vs-container-defaults.md",
             "004-full-ownership-vs-managed-cloud.md",
+            "005-upstream-divergence-vs-fork-invariant.md",
         ]
 
         for dissonance_dir in dissonance_dirs:
